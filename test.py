@@ -6,16 +6,16 @@ import mysql.connector
 from mysql.connector import errorcode
 
 # DATAMAILBOX CREDENTIALS
-t2mAccount = "t2macc"
-t2mUsername = "t2muser"
-t2mPassword = "t2mpass"
-t2mDevId = "devId"
+t2mAccount = "t2mAccount"
+t2mUsername = "t2mUsername"
+t2mPassword = "t2mPassword"
+t2mDevId = "t2mDevId"
 
 try:
     # DATABASE CONNECTION CREDENTIALS
-    cnx = mysql.connector.connect(user='root',
-                                  password='root',
-                                  host='127.0.0.1',
+    cnx = mysql.connector.connect(user='test',
+                                  password='test',
+                                  host='0.0.0.0',
                                   database='test')
     cursor = cnx.cursor()
 
@@ -86,7 +86,7 @@ try:
                                     "VALUES (%s, '%s', '%s', %s)" \
                                     % (tagId, historyDate, historyQuality, historyValue)
                             cursor.execute(query)
-                            cnx.commit()
+                        cnx.commit()
 
         # Check if more data is available
         if "moreDataAvailable" in jsonData and jsonData["moreDataAvailable"]:
