@@ -104,7 +104,7 @@ CREATE TABLE `tag_list` (
   `ewon_id` int(11) DEFAULT NULL COMMENT 'ID of parent Ewon',
   `name` varchar(45) DEFAULT NULL COMMENT 'Tag name',
   `type` varchar(45) DEFAULT NULL COMMENT 'Tag type',
-  `description` varchar(45) DEFAULT NULL COMMENT 'Tag description',
+  `description` varchar(100) DEFAULT NULL COMMENT 'Tag description',
   `alarm_hint` varchar(45) DEFAULT NULL COMMENT 'Tag alarm hint',
   `ewon_tag_id` varchar(45) DEFAULT NULL COMMENT 'Tag ID inside Ewon',
   `inserted_ts` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
